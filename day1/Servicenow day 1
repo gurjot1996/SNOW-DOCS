@@ -1,0 +1,51 @@
+Servicenow day 1
+
+	Scripting in Servicenow 
+		1)Client scripting 
+			a)Onload
+			b)Onchange
+			c)Onsubmit
+			d)OnCellEdit
+		Client scripts can be marked for desktop/all 
+		Another kind of client scripts are catalog client scripts ,
+		Client script can be applied on the tables and the catalog client scripts can be applied either to a catalog item or a variable set.
+		OnChange(Control,oldValue,newValue,isLoading,isTemplate)
+			control-field on which client script is functional
+			oldvalue/newvalue
+			isloading-boolean to indicate that value changed during onload
+			isTemplate-boolean to indicate value changed due to population by a template
+
+		2)g_form 
+			getValue,setValue,addErrormessage,addInfoMessage,addOption,ClearOptions,getSections
+
+		3)g_user
+			get info about logged in user
+				fisrtname,lastname,username,id,hasRole,hasRoleExactly
+
+		4)Debugging in Servicenow
+			jslogs,field watcher,try/catch blocks
+
+		5)UI policies
+			These too work on the client side and are an alternate to the manual client scripts
+			Used mainly for
+			a)making fields readonly
+			b)making fields mandatory
+			c)show/hide fields
+			Client scripts execute first and then the ui policies execute.
+			Users specify the ui policy action which governs the fields to be made mandatory,etc.
+			These can be applied to tables and catalog items etc.
+
+			UI policies usually execute based on conditions i.e onchange but there is a checkbox to execute them 
+			onLoad 
+			Description should be given for ui policies as they don't have a name field of their own and description is there name
+
+		6)Diff bw client scripts and ui policies
+			ui policies dont have access to old value of field
+			ui execute onLoad and onchange only
+
+		7)Server Side Scripting
+			the major tasks accompolished using server side scripting are
+			making API calls,handling failed logins ,changing field values,logging messages,get todays date/time,
+			generate/respond to events
+
+		8)

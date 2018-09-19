@@ -1,0 +1,16 @@
+Questions
+
+1)How to display UI page by clicking on module in left nav panel?
+	Set link type of module to URL and in arguments enter the module name followed by .do and in window use _blank,_self etc.
+
+2) How to make a system properties page?
+	a)Open sys_properties_category.LIST
+	b)create a new category
+	c)add new properties and click try it
+	d)use the URL to embed it in a left nav module
+
+
+
+
+
+
